@@ -7,14 +7,15 @@
     --light-color: #666;
     --light-bg: #eee;
     --border: .2rem solid rgba(0, 0, 0.1);
-    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0.1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+
 }
 
-* {
 
+* {
     font-family: "poppins", sans-serif;
     /* margin: 0;
-            padding: 0; */
+    padding: 0; */
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -25,13 +26,13 @@
 *::-webkit-scrollbar {
     height: .5rem;
     width: 1rem;
+
 }
+
 
 *::-webkit-scrollbar-track {
-    background-color: transparent
+    background-color: transparent;
 }
-
-;
 
 *::-webkit-scrollbar-thumb {
     background-color: var(--blue);
@@ -41,13 +42,17 @@ html {
     font-size: 62.5%;
     overflow: hidden;
     scroll-behavior: smooth;
+
     scroll-padding-top: 6.5rem;
 }
 
-.row {
-    display: flex;
-    flex: 1;
+section {
+    padding: 7rem 2rem;
+
 }
+
+
+
 
 .link-btn {
     display: inline-block;
@@ -65,12 +70,184 @@ html {
 }
 
 
+
 .header {
     padding: 2rem;
     border-bottom: var(--border);
 }
 
+.header.active{
+    background-color:var(--white) ;
+    box-shadow: var(--box-shadow);
+    border: 0;
+}
+
+
 .header .logo {
     font-size: 2rem;
     color: var(--black);
+
+}
+
+.header .logo span {
+    color: var(--blue);
+}
+
+
+.header .nav a {
+
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--black);
+
+}
+
+.header .nav a:hover {
+    color: var(--blue);
+
+}
+
+#menu-btn {
+    font: 2.5;
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+
+}
+
+.home {
+    background: url(./images/dentist.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.home .content{
+ width: 55rem;
+ padding: 2rem;
+} 
+.home .content h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--black);
+     
+}
+.home .content p{
+    line-height: 2;
+    font-size: 1.5rem; 
+    color: var(--light-color);
+    padding: 1rem 0;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header .link-btn {
+        display: none;
+
+    }
+
+    section {
+        padding: 5rem 2rem;
+
+    }
+}
+
+@media (max-width:768px) {
+
+    section {
+        padding: 3rem 1rem;
+
+    }
+
+    #menu-btn {
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times {
+
+        transform: rotate(180deg);
+    }
+
+    .header .nav {
+        position: absolute;
+        top: 99%;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        padding: 1 rem 0;
+        text-align: center;
+        flex-flow: column;
+        clip-path: polygon(0 0. 100% 0, 0 0);
+    }
+
+    .header .mav .active {
+        clip-path: polygon(0 0, 100% 0. 100% 100%, 0 100%);
+
+    }
+
+
+    .header .nav a {
+        margin: 1rem 0;
+        font-size: 2rem;
+
+    }
+    .home{
+        background-position: left;
+
+    }
+    .home .content{
+        width: auto;
+    }
+
+}
+
+
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .content h3{
+       font-size: 4  rem;
+    }
 }
