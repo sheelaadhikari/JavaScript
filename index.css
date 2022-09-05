@@ -1,199 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-body {
-    font-family: Comfortaa, 'Times New Roman', Times, serif;
-    background-color: #eeeeee;
-    margin: 0;
-    color: #444444;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200;1,400;1,600&display=swap');
+
+:root {
+    --blue: #00b8b8;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --border: .2rem solid rgba(0, 0, 0.1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0.1);
 }
 
-.nav-bar {
+* {
+
+    font-family: "poppins", sans-serif;
+    /* margin: 0;
+            padding: 0; */
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent
+}
+
+;
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+.row {
     display: flex;
-    justify-content: space-between;
-    background-color: white;
+    flex: 1;
 }
 
-.nav-left {
-    display: flex;
-    flex-direction: row;
-    /* background-color: white; */
-}
-
-.image-site>img {
-    width: 100vw;
-    height: 500px;
-    object-fit: cover;
-    opacity: 0.6;
-    /* filter: opacity(0.5); */
-}
-
-.site-bar {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.site-details-wrapper {
-    width: 50%;
-    margin: auto;
-}
-
-.site-details {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 500px;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.site-details p {
-    align-self: center;
-    font-weight: bolder;
-    font-size: 2.5em;
-    color: orangered;
-}
-
-.nav-left>div>img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.title-bar {
-    align-self: center;
-    color: orangered;
-    font-family: "Ranchers" !important;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.nav-right {
-    display: flex;
-    align-self: center;
-    font-weight: bold;
-    margin-right: 50px;
-}
-
-.nav-item {
-    padding: 12px 20px;
-    font-size: 1.1em;
-}
-
-.nav-item>a {
-    color: #444444;
-    text-decoration: none;
-}
-
-.nav-item>a:hover {
-    /* text-decoration: underline; */
-    color: orangered;
-}
-
-.parag-wrapper {
-    padding: 50px 50px;
-}
-
-.success-bar {
-    font-size: 2.1em;
-    font-weight: bolder;
-    color: orangered;
-    text-align: center;
-    padding: 20px 20px;
-}
-
-.child-bar1 {
-    width: 18%;
-    padding: 24px;
-    border-radius: 30px;
-    /* background-color: white; */
-    font-weight: 400;
-}
-
-.child-bar1>div>img {
-    width: 100%;
-    border-radius: 360px;
-    height: 220px;
-    object-fit: cover;
-}
-
-.Story-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.type-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.child-bar {
-    /* flex: 1;     */
-    width: 18%;
-    padding: 24px;
-    border-radius: 30px;
-    background-color: white;
-    font-weight: 400;
-}
-
-.child-bar>div>img {
-    width: 100%;
-    border-radius: 14px;
-    height: 220px;
-    object-fit: cover;
-}
-
-.bottom-bar {
-    padding: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #eeeeee;
-    border-radius: 20px;
-    margin-top: 12px;
-}
-
-.pet-name {
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: center;
-    padding: 12px 0;
-    text-decoration: underline;
-}
-
-.about-wrapper {
-    margin: 10px auto 20px auto;
-    display: flex;
-    justify-content: space-around;
-    /* border-top: 1px solid silver; */
-    padding-top: 20 px;
-}
-
-.breed-bar {
-    flex: 3;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.price-bar {
-    flex: 2;
-    font-weight: bold;
-    padding: 10px;
-    border-left: 2px solid gray;
-}
-
-.buy-bar {
-    text-align: center;
-    background-color: orangered;
-    font-weight: bold;
-    padding: 10px 0 10px 0;
-    width: 50%;
-    margin: 10% 25%;
+.link-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    background-color: var(--blue);
     cursor: pointer;
-    border-radius: 20px;
-    color: white;
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.link-btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+.header {
+    padding: 2rem;
+    border-bottom: var(--border);
+}
+
+.header .logo {
+    font-size: 2rem;
+    color: var(--black);
 }
