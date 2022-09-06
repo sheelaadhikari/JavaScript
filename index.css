@@ -14,8 +14,8 @@
 
 * {
     font-family: "poppins", sans-serif;
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -40,11 +40,11 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+  
     scroll-behavior: smooth;
 
     scroll-padding-top: 6.5rem;
-}
+} 
 
 section {
     padding: 7rem 2rem;
@@ -140,6 +140,29 @@ section {
 
 
 }
+.about .row{
+    min-height: 50vh;
+
+}
+.about .content span{
+    font-size: 2rem;
+    color: var(--blue);
+
+
+}
+.about .content h3{
+    font-size: 3rem;
+    color: var(--black);
+    margin-top: 1rem;
+
+}
+.about .content p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    line-height:2 ;
+}
+
 
 
 
