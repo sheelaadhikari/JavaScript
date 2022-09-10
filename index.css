@@ -272,5 +272,6 @@ section {
 
     .home .content h3{
        font-size: 4  rem;
+       padding: left;
     }
 }
