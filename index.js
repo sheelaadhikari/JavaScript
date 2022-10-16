@@ -1,20 +1,19 @@
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .nav');
-let header = document.querySelector('.header');
-menu.click = () => {
-    menu.classList.toggle('fa-times');
-    menu.classList.toggle('active');
-}
-window.onscroll = () => {
-    menu.classList.remove('fa-times');
-    menu.classList.remove('active');
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './components/App';
+// import './index.css';
+// import reportWebVitals from './reportWebVitals';
 
-    if (window.scrolly > 0) {
-        header.classList.add('active');
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode> 
+);
 
 
-    }
-    else {
-        header.classList.remove('active');
-    }
-} 
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
