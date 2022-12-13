@@ -1,0 +1,74 @@
+<style type="text/css">
+    body{
+      background: chocolate;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .box{
+      padding: 30px;
+      width: 400px;
+      background: #fff;
+      border-radius: 15px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border: 4px solid teal;
+    }
+    .key-code{
+      padding: 20px 0px;
+      font-size: 2em;
+      text-align: center;
+    }
+    .key-name{
+      text-transform: uppercase;
+      border-bottom: 4px solid teal;
+      padding: 20px 0px;
+      font-size: 3em;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .key-name,.key-code{
+      display: none;
+    }
+    .key-btn{
+      font-size: 28px;
+      background: teal;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  </style>
+  
+  <div class="box-wrapper">
+    <div class="box">
+      <div class="key-btn">Press a Key</div>
+      <div class="key-name">
+        enter
+      </div>
+      <div class="key-code">
+        Code : 32
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    btn = document.getElementsByClassName('key-btn')[0];
+    keyname = document.getElementsByClassName('key-name')[0];
+    keycode = document.getElementsByClassName('key-code')[0];
+  
+    document.addEventListener("keydown", e=>{
+      if(e.keyCode==32){
+        name = 'space';
+      }else{
+        name = e.key;
+      }
+      btn.style.display = 'none';
+      keyname.innerHTML = name;
+      keycode.innerHTML = 'Code : '+e.keyCode;
+      keyname.style.display = 'block';
+      keycode.style.display = "none";
+    });
+  </script>
