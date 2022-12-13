@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  margin: 1rem 0 3tem;
+}
+.title {
+  color: rgb(109, 181, 184);
+  font-weight: 500;
+  font-size: 120px;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  padding: 0.5rem 1rem;
+  outline: none;
+  height: 50px;
+  width: 320px;
+  border-radius: 10px;
+  margin: 0.4rem;
+  transition: 0.5s;
+  font-size: 1.15rem;
+}
+
+.add {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(98, 158, 158);
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0.25rem;
+}
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+ 
+}
+
+.item_input {
+  background-color: aquamarine;
+  outline: none;
+  border: 3px solid red;
+  border-radius: 10px;
+  padding: 10px;
+  color: azure;
+  margin-top: 15px;
+  font-size: 40px;
+  width: 1.5px;
+}
+.button-cont{
+    justify-content: center;
+}
+
+.remove-btn{
+    margin-top: 35px;
+    color: white;
+   font-size: 20px;
+    text-decoration: none;
+    background-color: chocolate;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    transition: all 0.4s ease 0s;
+    height: 55px;
+    width: 150px;
+
+
+}
+
+.remove-btn:hover{
+    background-color: blue;
+    letter-spacing: 1px;
+
+}
