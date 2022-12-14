@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="change()">
+
+    <script type="text/javascript">
+var i=0;
+var color= new Array("red","black", "blue","pink"," purple","grey", "green", "yellow");
+function change(){
+    document.body.style.backgroundColor=color[i];
+    i++;
+    if(i>color.length){
+        i=0;
+    }
+    window.setTimeout("change()",1000);
+}
+
+
+
+    </script>
+    
+</body>
+</html>
