@@ -1,0 +1,29 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100%;
+  
+    box-sizing: border-box;
+  }
+
+.container{
+    padding: 10px;
+    display: flex;
+
+}
+.quote{
+    height: 500px;
+    width: 500px;
+}
+
+.imag>img{
+    height: 500px;
+    width: 500px;
+}
+.hidden {
+    visibility: hidden;
+}
